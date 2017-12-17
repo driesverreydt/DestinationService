@@ -7,3 +7,10 @@ jdk:
 script:
 - cd destinationservice
 - mvn clean package
+sudo: required
+services:
+- docker
+script:
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+- mvn clean package docker:build
+- docker push driesverreydt/travelagencydestinationservice:latest
