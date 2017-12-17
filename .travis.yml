@@ -1,8 +1,9 @@
 language: java
 cache:
  directories:
- - $HOME/destinationservice.m2
+ - $HOME/.m2
 jdk:
 - oraclejdk8
 script:
+- cd destinationservice
 - mvn clean package
