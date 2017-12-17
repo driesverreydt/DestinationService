@@ -11,6 +11,6 @@ sudo: required
 services:
 - docker
 script:
-- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+- docker login -u driesverreydt -p Verreydt1991
 - mvn clean package docker:build
 - docker push driesverreydt/travelagencydestinationservice:latest
