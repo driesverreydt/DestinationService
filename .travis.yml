@@ -12,5 +12,6 @@ services:
 - docker
 script:
 - docker login -u driesverreydt -p Verreydt1991
+- cd destinationservice
 - mvn clean package docker:build
 - docker push driesverreydt/travelagencydestinationservice:latest
