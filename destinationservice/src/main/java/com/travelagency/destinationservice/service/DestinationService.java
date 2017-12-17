@@ -1,5 +1,6 @@
 package com.travelagency.destinationservice.service;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +14,7 @@ public class DestinationService {
 Map<String,DestinationInfo> destinationInfos;
 	
 	public DestinationService(){
+		destinationInfos = new HashMap<String,DestinationInfo>();
 		initDestinationInfos();
 	}
 	
